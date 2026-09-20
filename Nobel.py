@@ -23,8 +23,15 @@ def user_input_features():
 df = user_input_features()
 
 nobel =  pd.read_csv('nobel2.csv', encoding='utf-8')
+
+#X = nobel.Text
+#y = nobel.Label
+
+#{'physics':0, 'medicine':1, 'peace':2, 'literature':3, 'chemistry':4, 'economics':5}
+category_map = {'physics': 0, 'medicine': 1, 'peace': 2, 'literature': 3, 'chemistry': 4, 'economics': 5}
+
 X = nobel.Text
-y = nobel.Label
+y = nobel.Label.map(category_map)
 
 vect = CountVectorizer()
 X_dtm = vect.fit_transform(X)
