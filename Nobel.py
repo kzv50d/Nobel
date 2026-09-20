@@ -45,17 +45,20 @@ prediction = nb.predict(df_dtm)
 #{'physics':0, 'medicine':1, 'peace':2, 'literature':3, 'chemistry':4, 'economics':5}
 #'Physics', 'Medicine', 'Peace', 'Literature', 'Chemistry', 'Economics'
 st.subheader('Predicción')
-if prediction == 0:
-  st.write('Physics')
+st.subheader('Predicción')
+if df['Text'][0].strip() == '':
+    st.write('Escribe un texto para obtener una predicción.')
+elif prediction == 0:
+    st.write('Physics')
 elif prediction == 1:
-  st.write('Medicine')
+    st.write('Medicine')
 elif prediction == 2:
-  st.write('Peace')
+    st.write('Peace')
 elif prediction == 3:
-  st.write('Literature')
+    st.write('Literature')
 elif prediction == 4:
-  st.write('Chemistry')
+    st.write('Chemistry')
 elif prediction == 5:
-  st.write('Economics')
+    st.write('Economics')
 else:
-  st.write('Sin predicción')
+    st.write('Sin predicción')
