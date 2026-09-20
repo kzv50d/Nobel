@@ -44,7 +44,7 @@ prediction = nb.predict(df_dtm)
 
 #{'physics':0, 'medicine':1, 'peace':2, 'literature':3, 'chemistry':4, 'economics':5}
 #'Physics', 'Medicine', 'Peace', 'Literature', 'Chemistry', 'Economics'
-st.subheader('Predicción')
+ 
 st.subheader('Predicción')
 if df['Text'][0].strip() == '':
     st.write('Escribe un texto para obtener una predicción.')
