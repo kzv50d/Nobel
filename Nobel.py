@@ -22,9 +22,9 @@ def user_input_features():
 
 df = user_input_features()
 
-nobel =  pd.read_csv('nobel2.csv', encoding='latin-1')
-X = nobel.Text
-y = nobel.Label
+nobel =  pd.read_csv('nobel2.csv', encoding='utf-8')
+X = nobel.clean
+y = nobel.Category
 
 vect = CountVectorizer()
 X_dtm = vect.fit_transform(X)
