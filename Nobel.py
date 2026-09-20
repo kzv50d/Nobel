@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 
 
 st.write(''' # Predicción de categoría de Premio Nobel ''')
-st.image("Nobel.png", caption="Su creador fue el inventor sueco Alfred Nobel mediante su testamento en 1895.")
+st.image("medalla.jpg", caption="Su creador fue el inventor sueco Alfred Nobel mediante su testamento en 1895.")
 
 st.header('Texto')
 
@@ -22,7 +22,7 @@ def user_input_features():
 
 df = user_input_features()
 
-nobel =  pd.read_csv('df_nobel.csv', encoding='latin-1')
+nobel =  pd.read_csv('nobel.csv', encoding='latin-1')
 X = nobel.Text
 y = nobel.Label
 
